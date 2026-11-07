@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dear Ashish 💙</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg,#080d20,#14294c,#080d20);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  color: #b8d9ff;
+  animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .2; transform: scale(.7); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.page {
+  min-height: 100vh;
+  width: 100%;
+  padding: 25px 18px;
+  display: none;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;
+  animation: appear .8s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(35px) scale(.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.content {
+  width: 100%;
+  max-width: 450px;
+  padding: 30px 22px;
+  border: 1px solid #45658d;
+  background: rgba(20,38,68,.8);
+  border-radius: 24px;
+  box-shadow: 0 0 35px #183b68;
+}
+
+h1 {
+  color: #c5ddff;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #d8eaff;
+  margin-bottom: 18px;
+}
+
+p {
+  color: #e0eaff;
+  line-height: 1.9;
+  font-size: 16px;
+  margin: 14px 0;
+}
+
+.emoji {
+  font-size: 55px;
+  margin: 20px;
+  display: block;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  50% { transform: translateY(-12px); }
+}
+
+button {
+  border: none;
+  padding: 14px 20px;
+  width: 100%;
+  border-radius: 30px;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #10203b;
+  background: linear-gradient(90deg,#c5dcff,#8dbbfa);
+  transition: .3s;
+}
+
+button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px #8dbbfa;
+}
+
+.secondary {
+  background: #263e60;
+  color: white;
+}
+
+.letter {
+  background: #eaf2ff;
+  color: #19304e;
+  padding: 22px;
+  border-radius: 15px;
+  line-height: 1.9;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.letter p {
+  color: #19304e;
+}
+
+.choice {
+  background: #203b60;
+  color: white;
+  border: 1px solid #6e91ba;
+}
+
+.small {
+  font-size: 13px;
+  color: #a9c8ed;
+}
+
+.heart {
+  color: #ff9eb5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+<div class="content">
+  <span class="emoji">🌙💙</span>
+  <h1>Hey Ashish...</h1>
+
+  <p>
+    I know things aren't okay between us right now.
+  </p>
+
+  <p>
+    But I have something important to tell you.
+    Something straight from my heart. 🥺
+  </p>
+
+  <button onclick="nextPage(2)">
+    Open This For Me 💌
+  </button>
+
+  <p class="small">A little message, just for you.</p>
+</div>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+<div class="content">
+  <span class="emoji">💌</span>
+  <h1>A Letter For You</h1>
+
+  <p>
+    Some feelings are difficult to explain
+    through normal messages.
+  </p>
+
+  <p>
+    So today, I made something special
+    just to tell you what's in my heart.
+  </p>
+
+  <button onclick="nextPage(3)">
+    Read My Heart ❤️
+  </button>
+</div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+<div class="content">
+  <span class="emoji">🥺</span>
+  <h1>I'm Really Sorry</h1>
+
+  <div class="letter">
+
+    Ashish,
+
+    <p>
+      I know my Snapchat birthday date prank
+      hurt you. I didn't think about how
+      you would feel, and I'm genuinely sorry.
+    </p>
+
+    <p>
+      But please understand one thing:
+      I was not making fun of your feelings.
+      What we have is not a joke to me.
+    </p>
+
+    <p>
+      I don't have feelings for Aditya anymore.
+      I don't want to talk to him or bring
+      him back into my life.
+    </p>
+
+    <p>
+      My past is my past. I don't want it
+      to create doubts about my present.
+    </p>
+
+    <p>
+      You are important to me, Ashish.
+      I just wish you could understand
+      how genuine my feelings are. ❤️
+    </p>
+
+  </div>
+
+  <button onclick="nextPage(4)">
+    One More Thing... 💙
+  </button>
+</div>
+</section>
